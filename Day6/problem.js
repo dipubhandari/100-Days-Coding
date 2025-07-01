@@ -8,6 +8,7 @@ const data = String(input).split("");
 
 function findPalin(data) {
   const input = data;
+  5;
   const checkEven = parseInt(input);
   //   if (!checkEven) {
   //     console.log("The number is not a palindrone");
