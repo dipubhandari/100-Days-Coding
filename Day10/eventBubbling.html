@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+    <style>
+        .parent {
+            border: 1px solid olive;
+            padding: 10px;
+            background-color: aqua;
+        }
+
+        .child {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 10px;
+            background-color: rgb(25, 73, 73);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learning Event Bubbling</h1>
+    <div class="parent">
+        <button class="child">click me </button>
+    </div>
+
+    <script>
+        const parent = document.querySelector('.parent')
+        parent.addEventListener('click', handleClickFirst)
+        function handleClickFirst(e) {
+            // e.stopPropagation();
+            console.log("Outer Clicked");
+        }
+
+        const child = document.querySelector('.child')
+        child.addEventListener('click', handleSecondClick)
+        function handleSecondClick(e) {
+            e.stopPropagation();
+            console.log("inner Clicked");
+        }
+    </script>
+</body>
+
+</html>
