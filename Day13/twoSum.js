@@ -1,5 +1,5 @@
-const l1 = [2, 4, 3];
-const l2 = [5, 6, 4];
+const l1 = [2, 4, 3, 9];
+const l2 = [5, 6, 4, 0];
 function addTwo(input1, input2) {
   let remainder = 0;
   let output = [];
@@ -20,6 +20,6 @@ function addTwo(input1, input2) {
       remainder = parseInt(secondNum);
     }
   }
-  console.log(output);
+  return output;
 }
-addTwo(l1, l2);
+console.log(addTwo(l1, l2));
