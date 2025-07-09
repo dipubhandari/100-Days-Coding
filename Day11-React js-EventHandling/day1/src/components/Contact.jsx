@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [input, setInput] = useState({ username: "", password: "" });
@@ -35,7 +36,8 @@ const Contact = () => {
           name="password"
         />
         <br />
-        <input type="submit" value="Send" />
+        <input type="submit" value="Send" /> <br />
+        <Link to="/about-us">About us</Link>
       </form>
       <h3>All fruits</h3>
       {fruits.map((item) => {
