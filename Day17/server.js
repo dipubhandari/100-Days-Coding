@@ -1,7 +1,7 @@
 import express from "express";
 import http from "http";
 import dbConnect from "./Database/database.js";
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 import userRoutes from "./Routes/userRoutes.js";
 
 const app = express();

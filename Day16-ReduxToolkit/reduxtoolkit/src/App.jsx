@@ -14,6 +14,7 @@ function App() {
       <h1>Learning Redux Toolkit</h1>
       <h2>Day {day}</h2>
       <br />
+      <head></head>
       <input
         type="text"
         placeholder="Enter the amount"
