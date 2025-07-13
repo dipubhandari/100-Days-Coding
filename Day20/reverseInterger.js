@@ -6,19 +6,15 @@
 // console.log("I will solve this tommoworw");
 let input = 234234;
 
-function reverse(data) {
-  //   lets split every digits and put them as an array
-  //   first convert it to the string
-  let result = undefined;
+function reverse(a) {
+  let result = "";
   let resultArr = [];
-  const newData = data.toString();
-  //   now lets reverse it do not make use of prebuilt function like reverse()
+  const newData = a.toString();
   const arr = newData.split("");
-  //   real reverse heree
   for (let i = arr.length - 1; i >= 0; i--) {
     resultArr.push(arr[i]);
   }
-  resultArr.map((value, index) => {
+  resultArr.forEach((value, index) => {
     if (index == 0) {
       result = value;
     } else {
@@ -26,7 +22,6 @@ function reverse(data) {
     }
   });
   const realResult = Number(result);
-  console.log(realResult);
   return realResult;
 }
-reverse(input);
+console.log(reverse(input));
