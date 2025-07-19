@@ -1,12 +1,15 @@
 import express from "express";
 import http from "http";
-import dbConnect from "./Database/database.js";
+import dbConnect from "./database/database.js";
 // import mongoose from "mongoose";
-import userRoutes from "./Routes/userRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
+const PORT = 5000;
 const app = express();
 const server = http.createServer(app);
-const DATABASE_URL = process.env.MONGO_URL || "mongodb://localhost:27017";
+const DATABASE_URL =
+  process.env.MONGO_URL ||
+  "mongodb+srv://livexettri:xettrilive@myapp.oosmo9o.mongodb.net/?retryWrites=true&w=majority&appName=MyApp";
 
 // db connect
 dbConnect(DATABASE_URL);
@@ -14,6 +17,6 @@ dbConnect(DATABASE_URL);
 // Routes
 app.use("/", userRoutes);
 
-server.listen(() => {
+server.listen(PORT, () => {
   console.log("The app is listening");
 });

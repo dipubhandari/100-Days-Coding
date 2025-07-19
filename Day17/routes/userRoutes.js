@@ -3,6 +3,6 @@ import UserController from "../Controllers/User.js";
 
 const userRoutes = express.Router();
 
-userRoutes("/data", UserController.showData());
+userRoutes.get("/data", UserController.showData);
 
 export default userRoutes;
