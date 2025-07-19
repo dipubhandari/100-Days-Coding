@@ -14,6 +14,8 @@ const DATABASE_URL =
 // db connect
 dbConnect(DATABASE_URL);
 
+// this middleware BEFORE your routes
+app.use(express.json());
 // Routes
 app.use("/", userRoutes);
 
