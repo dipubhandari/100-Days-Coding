@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const dbConnect = async (DATABASE_URL) => {
+  console.log("this workds");
   try {
     const DB_OPTIONS = {
       dbName: "100days",
