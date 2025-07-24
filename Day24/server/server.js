@@ -1,5 +1,5 @@
 import express from "express";
-
+import cors from "cors";
 const app = express();
 const PORT = 5000;
 
@@ -9,14 +9,16 @@ const api = [
   { id: 3, title: "Title 3", desc: "Third desc" },
   { id: 4, title: "Title 4", desc: "Forth desc" },
 ];
-app.get("/", () => {
+app.use(cors());
+app.get("/", (req, res) => {
   res.send("Homepage");
 });
 
-app.get("/data", () => {
-  res.send("All datas");
+app.get("/api/data", (req, res) => {
+  console.log("this runs");
+  res.send(api);
 });
 
-app.listen("/", () => {
+app.listen(PORT, () => {
   console.log("Application is running in port ", PORT);
 });
